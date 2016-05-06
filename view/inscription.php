@@ -2,7 +2,7 @@
 	<?php include_once("include/head.php"); ?>
 	<body>
 			<h1>Inscription</h1>
-			<?php //include_once("include/header.php"); ?>
+			<?php include_once("include/header.php"); ?>
 			<form method="POST" action ="validerInscription.php" >
 				Login : <input type="text" name="login">
 			</br>

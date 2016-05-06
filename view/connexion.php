@@ -1,6 +1,7 @@
 <html lang = "fr">
 	<?php include_once("include/head.php"); ?>
 	<body>
+			<?php include_once("include/header.php"); ?>
 			<h1>Connexion</h1>
 			<form method="POST" action ="validerConnexion.php">
 				Pseudo :
