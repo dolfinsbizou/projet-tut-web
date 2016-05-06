@@ -1,5 +1,5 @@
 <html lang ="fr">
-	<? include_once("include/head.php"); ?>
+	<?php include_once("include/head.php"); ?>
 	<body>
 			<h1>Connexion</h1>
 			<form method="POST" action ="validerConnexion.php">

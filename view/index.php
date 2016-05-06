@@ -1,5 +1,5 @@
 <html lang="fr">
-	<?php //include_once("include/head.php"); ?>
+	<?php include_once("include/head.php"); ?>
 	<body>
 		<?php// include_once("include/header.php");?>
 		<h1> Présentation </h1>
