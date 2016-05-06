@@ -12,6 +12,6 @@
 				<input type="submit" value ="Connexion">
 			</form>
 			<a href = "inscription.php"> Inscrivez-vous </a>
-			<?php //include_once("include/footer.php") ?>
+			<?php include_once("include/footer.php") ?>
 	</body>
 </html>

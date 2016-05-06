@@ -14,6 +14,6 @@
 			</br>
 				<input type="submit" value="valider">
 			</form>
-			<?php //include_once("include/footer.php"); ?>
+			<?php include_once("include/footer.php"); ?>
 	</body>
 </html>
