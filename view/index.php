@@ -1,4 +1,4 @@
-<html lang="fr">
+<html lang = "fr">
 	<?php include_once("include/head.php"); ?>
 	<body>
 		<?php// include_once("include/header.php");?>
