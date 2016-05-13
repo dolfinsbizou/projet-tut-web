@@ -12,5 +12,8 @@
 						<p>Mais on a une image de Sean Connery en slip</p>
 						<a href ="./">Retour à l'accueil</a>
 					</section>
+				</div>
+			</div>
+			<?php include_once("include/footer.php"); ?>
 	</body>
 </html>
