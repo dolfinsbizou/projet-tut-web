@@ -1,11 +1,15 @@
 <?php
 	
-session_start();
 
-	function Log ($id, $login, $mdp, $email, $Admin)
+
+	function Logsession ($id, $login, $mdp, $email, $Admin)
 	{
+		session_start();
+		$_SESSION['idusers'] = $id;
 		$_SESSION['login'] = $login;
 		$_SESSION['mdp'] = $mdp;
+		$_SESSION['email'] = $email;
+		$_SESSION['Admin']	= $Admin;
 	}
 
 
