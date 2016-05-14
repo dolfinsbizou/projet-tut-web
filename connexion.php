@@ -9,7 +9,7 @@ else
 {
 		if (isset($GET['err']))
 		{
-			$err = "<div id =\"err" class=\"icon\">";
+			$err = "<div id =\"err\" class=\"icon\">";
 			switch($_GET['err'])
 			{
 				case 1:

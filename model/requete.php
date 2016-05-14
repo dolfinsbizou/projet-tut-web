@@ -52,6 +52,15 @@
 		$req->execute(array(('login') => $login, ('mdp') => $mdp, ('email')=>$email ));
 	}
 
+	function searchCard ()
+	{
+		$req = $db ->prepare('SELECT * FROM cartes');
+		$req->execute();
+		$usersinfo = $req->fetch();
+
+		return $usersinfo;
+	}
+
 
 
 
