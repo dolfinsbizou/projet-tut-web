@@ -7,7 +7,7 @@
 	function recupIDUsers($login)
 	{
 		global $db;
-		$req = db->prepare('SELECT idusers FROM users WHERE (LOWER(login) = :login') );
+		$req = $db->prepare('SELECT idusers FROM users WHERE (LOWER(login) = :login)' );
 		$req->execute(array('login'=>strtolower($login)));
 
 		$pseudo = $req->fetch(PDO::FETCH_COlUMN);
@@ -48,7 +48,7 @@
 	function inserUsers($login, $mdp, $email)
 	{
 		global $db;
-		$req = db->prepare('INSERT INTO users VALUES (NULL,:login,:mdp,:email,false)');
+		$req = $db->prepare('INSERT INTO users VALUES (NULL,:login,:mdp,:email,false)');
 		$req->execute(array(('login') => $login, ('mdp') => $mdp, ('email')=>$email ));
 	}
 
