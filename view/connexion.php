@@ -6,7 +6,7 @@
 			<?php echo ($err); ?>
 			<form method="POST" action ="validerConnexion.php">
 				Pseudo :
-				<input type="text" name="Pseudo">
+				<input type="text" name="pseudo">
 			</br>
 				Mot de passe : 
 				<input type="password" name"mdp">

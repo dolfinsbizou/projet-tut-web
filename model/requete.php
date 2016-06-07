@@ -52,18 +52,35 @@
 		$req->execute(array(('login') => $login, ('mdp') => $mdp, ('email')=>$email ));
 	}
 
-	function searchCard ()
+	function allCard ()
 	{
 		$req = $db ->prepare('SELECT * FROM cartes');
 		$req->execute();
-		$usersinfo = $req->fetch();
+		$card = $req->fetch();
 
-		return $usersinfo;
+		return $card;
 	}
 
+	function isExistingUser($pseudo) 
+	{ 
+	 	global $db; 
+	 	 
+	 	$req = $db->prepare('SELECT login FROM users WHERE (LOWER(login) = :pseudo)'); 
+	 	$req->execute(array('pseudo' => strtolower($pseudo))); 
+	  
+	 	$pseudos = $req->fetch(PDO::FETCH_COLUMN); 
+	  
+	 	return $pseudos?true:false; 
+ 	} 
 
-
-
-	
+	function getExchanges()
+	{
+		global $db;
+		$req = $db->prepare('SELECT echanges.idDonneur, echanges.idDonne, echanges.idCarte, cartes.nomCarte, users.login FROM echanges, cartes, users WHERE (cartes.idCarte = echanges.idCarte);')
+		//petit probleme avec la requete
+		$req ->execute();
+		$echanges = $req->fetch();
+		return $echanges;
+	}	
 
 ?>
