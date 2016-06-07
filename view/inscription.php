@@ -2,8 +2,8 @@
 	<?php include_once("include/head.php"); ?>
 	<body>
 			<?php include_once("include/header.php"); ?>
-			<h1>Inscription</h1>
-			
+			<h2>Inscription</h2>
+			<?php echo $err; ?>
 			<form method="POST" action ="validerInscription.php" >
 				Login : <input type="text" name="login">
 			</br>
