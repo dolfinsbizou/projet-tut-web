@@ -76,9 +76,9 @@
 	function getExchanges()
 	{
 		global $db;
-		$req = $db->prepare('SELECT echanges.idDonneur, echanges.idDonne, echanges.idCarte, cartes.nomCarte, users.login FROM echanges, cartes, users WHERE (cartes.idCarte = echanges.idCarte);')
+		$req = $db->prepare('SELECT echanges.idDonneur, echanges.idDonne, echanges.idCarte, cartes.nomCarte, users.login FROM echanges, cartes, users WHERE (cartes.idCarte = echanges.idCarte);');
 		//petit probleme avec la requete
-		$req ->execute();
+		$req->execute();
 		$echanges = $req->fetch();
 		return $echanges;
 	}	

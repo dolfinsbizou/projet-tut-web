@@ -3,6 +3,7 @@
 	<?php include_once("include/head.php"); ?>
 	<body>
 		<?php include_once("include/header.php");?>
+		<?php include_once("tableauDeCarte.php");?>
 		<div id = "content_wrapper">
 			<table>
 				<tr>

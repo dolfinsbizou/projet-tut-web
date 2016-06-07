@@ -1,0 +1,23 @@
+#header-wrapper
+ { 
+ 	background:  #4884B8; 
+ 	line-height: 1.3em; 
+ 	font-size: 1.2em; 
+	text-align: center;
+ } 
+
+html
+{
+	font-family: 'Tahoma';
+	background: lightyellow;
+}
+
+#content_wrapper
+{
+	font-size: 1.1em;
+}
+
+footer
+{
+	font-size: 0.7em;
+}
