@@ -18,9 +18,7 @@ else
 				case 3:
 					$err.="Ce n'est pas une adresse e-mail correcte";
 					break;
-				case 4:
-					$err.="Les mots de passes sont différents";
-					break;
+
 			}
 			$err.="</div>";
 		}

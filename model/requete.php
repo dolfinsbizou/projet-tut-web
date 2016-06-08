@@ -20,7 +20,7 @@
 	function recupDataByLogin($login)
 	{
 		global $db;
-		$req = $db ->prepare('SELECT * FROM users WHERE (login = :login)');
+		$req = $db->prepare('SELECT * FROM users WHERE (login = :login)');
 		$req->execute(array('email'=>strtolower($login)));
 
 		$usersInfo = $req->fetch();
