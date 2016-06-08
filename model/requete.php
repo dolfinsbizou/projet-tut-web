@@ -73,7 +73,7 @@
 	 	return $pseudos?true:false; 
  	} 
 
-	function getExchanges()
+	function getAllExchanges()
 	{
 		global $db;
 		$req = $db->prepare('SELECT echanges.idDonneur, echanges.idDonne, echanges.idCarte, cartes.nomCarte, users.login FROM echanges, cartes, users WHERE (cartes.idCarte = echanges.idCarte);');
@@ -82,5 +82,16 @@
 		$echanges = $req->fetch();
 		return $echanges;
 	}	
+
+
+	function getExchangesAvailable()
+	{
+		global $db;
+		$req = $db->prepare('SELECT echanges.idEchange, users.idusers, cartes.nomCarte FROM echanges, cartes, users WHERE ((cartes.idCarte = echanges.idCarte) and (cartes.idCarte = 0) and (cartes.idDonneur = users.idusers));');
+		//petit probleme avec la requete
+		$req->execute();
+		$echanges = $req->fetch();
+		return $echanges;
+	}
 
 ?>
