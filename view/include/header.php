@@ -20,7 +20,7 @@
 		<?php
 		}
 		?></li>
-		<li><a href="/membres.php">Membres</a></li>
+		<li><a href="/cartes.php">Cartes</a></li>
 		</ul>
 	</nav>
 </div>

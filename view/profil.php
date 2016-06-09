@@ -20,29 +20,17 @@
 				<?php if(isLogged())
 				{ ?>
 				<section class="content<?php echo $isPersonalProfil?' center':''; ?>">
-					<?php if ($isPersonalProfil)
-					{ 
-						displayBRB('Nouveau projet', 'nouveauProjet.php'); ?>
-					Créez un nouveau projet en cliquant sur le gros bouton rouge !
-					<?php }
-					else
-					{ ?>
-					<h2>Actions</h2>
-					<a href="chat.php?id=<?php echo $data['id']; ?>#bottom" title="Chattez avec <?php echo $data['pseudo']; ?>">Discutez avec <?php echo $data['name'];?> !</a>
-					<?php } ?>
+					<?php displayBRB('Nouvel échange', 'nouveauProjet.php'); ?>
+					Créez un nouvel échange !
 				</section>
 				<?php } ?>
 			</div>
 			<div id="content_right">
 				<section class="content">
-					<h2>Récemment joués</h2>
-					<?php displayGameList($libs, false, true); ?>
-					<a class="lien_tous" href="librairie.php?id=<?php echo $uid;?>">Librairie complète</a>
-				</section>
-				<section class="content">
-					<h2>Liste des créations</h2>
-					<?php displayGameList($jeux); ?>
-					<a class="lien_tous" href="creations.php?id=<?php echo $uid;?>">Toutes les créations</a>
+					<h2>Actions</h2>
+					<ul>
+						<li><a href="cartes.php?id=<?= $uid ?>">Cartes du joueur</a></li>
+					</ul>
 				</section>
 			</div>
 		</div>

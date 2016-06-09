@@ -151,6 +151,14 @@ function displayBRB($bTitle, $bTarget)
 	echo '<a class="BRB" href="' . $bTarget . '"><span>' . $bTitle . '</span></a>';
 }
 
+function displayCard($color, $name)
+{
+	echo '<div class="card">';
+	echo '<div class="card_color" style="background: ' . $color . ';"></div>';
+	echo '<div class="card_name">' . $name . '</div>';
+	echo '</div>';
+}
+
 /*
  * Fonction de débogage
  */
