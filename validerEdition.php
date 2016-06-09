@@ -42,7 +42,6 @@ else
 		{
 			//On déplace l'image dans son emplacement définitif
 			$avatarPath = 'img/data/avatars/' . $_GET['id'] . '.' . pathinfo($_FILES['avatar']['name'])['extension'];
-				echo $avatarPath;
 			$oldAvatar = $avatarSet?'img/data/avatars/' . $_GET['id'] . '.' . $avatarSet:false;
 			$avatarSet = move_uploaded_file($_FILES['avatar']['tmp_name'], $avatarPath)?pathinfo($_FILES['avatar']['name'])['extension']:$avatarSet;
 			if($oldAvatar) //Suppression si besoin de l'ancienne image
@@ -110,6 +109,6 @@ else
 	{
 		updateUser($_GET['id'], null, $_POST['name'], $_POST['genre'], $_POST['email'], null, $_POST['bio'], (!empty($_POST['mdp'])?$_POST['mdp']:null), $avatarSet);
 		
-		//Header('Location: profil.php?id=' . $_GET['id']);
+		Header('Location: profil.php?id=' . $_GET['id']);
 	}
 }

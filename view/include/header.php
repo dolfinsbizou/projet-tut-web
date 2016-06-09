@@ -10,7 +10,8 @@
 		{
 		?>
 			<a href="/profil.php">Profil</a></li>
-			<li><a href="/disconnect.php">Déconnexion</a>
+			<li><a href="/disconnect.php">Déconnexion</a></li>
+			<li><a href="/echanges.php">Echanges</a>
 		<?php
 		}
 		else

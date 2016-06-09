@@ -258,6 +258,18 @@ a
 	color: red;
 }
 
+.delete_button:before
+{
+	font-family: 'icons';
+	content: "\ea0d";
+}
+
+.delete_button
+{
+	font-weight: bold;
+	color: red;
+}
+
 a:hover
 {
 	text-decoration: underline;

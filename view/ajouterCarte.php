@@ -10,9 +10,9 @@
 					<form action="validerAjoutCarte.php" method="post">
 						<label for="card">Carte à ajouter : </label>
 						<select id="card" name="card">
-							<?php foreach($cartes as $carte)
+							<?php foreach($cartes as $cart)
 							{ ?>
-							<option value="<?= $carte['id'] ?>"><?= $carte['name'] ?></option>
+							<option value="<?= $cart['id'] ?>"><?= $cart['name'] ?></option>
 							<?php } ?>
 						</select><br />
 						<input type="submit" value="Valider" />

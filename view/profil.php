@@ -20,7 +20,7 @@
 				<?php if(isLogged())
 				{ ?>
 				<section class="content<?php echo $isPersonalProfil?' center':''; ?>">
-					<?php displayBRB('Nouvel échange', 'nouveauProjet.php'); ?>
+					<?php displayBRB('Nouvel échange', 'nouvelEchange.php'); ?>
 					Créez un nouvel échange !
 				</section>
 				<?php } ?>
