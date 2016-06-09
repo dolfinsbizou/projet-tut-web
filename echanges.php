@@ -14,12 +14,12 @@ $avalaibleTrades = getAvalaibleTrades(getUserId());
 
 foreach($selfTrades as &$t)
 {
-	$t["comment"] = (htmlspecialchars($t["comment"]));
+	$t["comment"] = nl2br(htmlspecialchars($t["comment"]));
 } //flemme de sécuriser le reste
 
-foreach($selfTrades as &$et)
+foreach($avalaibleTrades as &$et)
 {
-	$et["comment"] = (htmlspecialchars($et["comment"]));
+	$et["comment"] = nl2br(htmlspecialchars($et["comment"]));
 } //flemme de sécuriser le reste
 
 $page_title = 'Liste des échanges';

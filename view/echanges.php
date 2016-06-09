@@ -35,7 +35,7 @@
 					<?php } ?>
 					</ul>
 
-					<h2>Liste de vos échanges</h2>
+					<h2>Liste des échanges disponibles</h2>
 					<ul>
 					<?php foreach($avalaibleTrades as $at)
 					{ ?>
