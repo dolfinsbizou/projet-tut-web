@@ -159,3 +159,11 @@ function concludeTrade($id, $dec)
 		$req3->execute(array($data['idUS'], $data['idLB']));
 	}
 }
+
+function betOnTrade($id, $cid, $uid, $com)
+{
+	global $bdd;
+
+	$req = $bdd->prepare('UPDATE trades SET idBuyingUser = ?, idBuyingCard = ?, comment = ?WHERE id = ?');
+	$req->execute(array($uid, $cid, $com, $id));
+}

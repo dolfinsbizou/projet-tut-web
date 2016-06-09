@@ -4,7 +4,7 @@
 	<body>
 		<?php include_once("include/header.php"); ?>
 		<div id="content_wrapper">
-			<div id="content_left">
+			<div id="content_center">
 				<section class="content">
 					<div id="avatar_profil"><img width="128" src="<?php echo $avatar; ?>" alt="avatar de <?php echo $data['name']; ?>" /></div>
 					<h2><?php displayPseudo($data['name'], $data['admin']); ?></h2>
@@ -19,19 +19,11 @@
 				</section>
 				<?php if(isLogged())
 				{ ?>
-				<section class="content<?php echo $isPersonalProfil?' center':''; ?>">
-					<?php displayBRB('Nouvel échange', 'nouvelEchange.php'); ?>
-					Créez un nouvel échange !
+				<section class="content center">
+					<?php if($isPersonalProfil) displayBRB('Nouvel échange', 'nouvelEchange.php'); ?>
+					<a href="cartes.php?id=<?= $uid ?>">Cartes du joueur</a>
 				</section>
 				<?php } ?>
-			</div>
-			<div id="content_right">
-				<section class="content">
-					<h2>Actions</h2>
-					<ul>
-						<li><a href="cartes.php?id=<?= $uid ?>">Cartes du joueur</a></li>
-					</ul>
-				</section>
 			</div>
 		</div>
 		<?php include_once("include/footer.php"); ?>
