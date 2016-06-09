@@ -12,3 +12,13 @@ function getUserLibrary($id)
 
 	return $req->fetchAll();
 }
+
+function addCardToLibrary($idUser, $idCard)
+{
+	global $bdd;
+
+	$req = $bdd->prepare('INSERT INTO library(idUser, idCard) VALUES (:us, :ca)');
+	$req->execute(array(
+				'us' => $idUser,
+				'ca' => $idCard));
+}
